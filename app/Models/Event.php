@@ -6,19 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
-    protected $fillable = [
-        'category_id',
-        'organizer_id',
-        'title',
-        'slug',
-        'description',
-        'banner',
-        'date',
-        'start_time',
-        'location',
-        'quota',
-        'status',
-    ];
+    protected $fillable = ['title', 'category_id', 'date', 'start_time', 'location', 'description', 'quota', 'status', 'banner', 'price']; // Tambahkan price
 
     // Relasi ke tabel categories
     public function category()

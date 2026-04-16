@@ -40,7 +40,7 @@
                                 <p>Dashboard</p>
                             </a>
                         </li>
-                        
+
                         @if(Auth::user()->role === 'admin')
                         <li class="nav-section">
                             <span class="sidebar-mini-icon"><i class="fa fa-ellipsis-h"></i></span>
@@ -105,9 +105,9 @@
                     <div class="page-header">
                         <h4 class="page-title">@yield('title', 'Dashboard')</h4>
                     </div>
-                    
+
                     @yield('content')
-                    
+
                 </div>
             </div>
 

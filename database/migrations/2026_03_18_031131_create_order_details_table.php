@@ -9,17 +9,17 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-public function up(): void
-{
-    Schema::create('order_details', function (Blueprint $table) {
-        $table->id();
-        $table->foreignId('order_id')->constrained()->cascadeOnDelete();
-        $table->foreignId('ticket_type_id')->constrained()->cascadeOnDelete();
-        $table->integer('quantity');
-        $table->integer('subtotal');
-        $table->timestamps();
-    });
-}
+    public function up(): void
+    {
+        Schema::create('order_details', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('order_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('ticket_type_id')->constrained()->cascadeOnDelete();
+            $table->integer('quantity');
+            $table->integer('subtotal');
+            $table->timestamps();
+        });
+    }
 
     /**
      * Reverse the migrations.

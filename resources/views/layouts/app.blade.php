@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>QuickTick - @yield('title', 'Dashboard')</title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-    
+
     <link rel="icon" href="{{ asset('assets/img/kaiadmin/favicon.ico') }}" type="image/x-icon"/>
 
     <script src="{{ asset('assets/js/plugin/webfont/webfont.min.js') }}"></script>
@@ -41,7 +41,7 @@
                                 <p>Dashboard</p>
                             </a>
                         </li>
-                        
+
                         @if(Auth::user()->role === 'admin')
                         <li class="nav-section">
                             <span class="sidebar-mini-icon"><i class="fa fa-ellipsis-h"></i></span>
@@ -61,7 +61,7 @@
                             <h4 class="text-section">Pemesanan Saya</h4>
                         </li>
                         <li class="nav-item">
-                            <a href="#">
+                            <a href="{{ route('user.tickets.index') }}">
                                 <i class="fas fa-ticket-alt"></i>
                                 <p>Tiket Saya</p>
                             </a>
@@ -110,14 +110,14 @@
                     </div>
                 </nav>
             </div>
-            
+
             <div class="container">
                 <div class="page-inner">
                     <div class="page-header mb-4">
                         <h4 class="page-title">@yield('title', 'Dashboard')</h4>
-                    </div>            
+                    </div>
                     @yield('content')
-                    
+
                 </div>
             </div>
 
